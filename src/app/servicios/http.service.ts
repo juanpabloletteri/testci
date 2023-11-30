@@ -14,6 +14,9 @@ export class HttpService {
     return this.http.get(this.ruta + url)
   }
 
+  public httpPost(url: string, datos: any) {
+    return this.http.post(this.ruta + url, datos);
+  }
 
   private handleError(error: Response | any) {
     return error;
