@@ -1,63 +1,60 @@
 <p>login works!</p>
-<p-button label="Submit"></p-button>
 
-<form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
-    <p-panel>
+<form class="container" [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
 
-        <p-panel header="Ingreso">
-            <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+    <p-panel header="Ingreso">
+        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
 
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-2">
-                        Mail *:
-                    </div>
-                    <div class="ui-grid-col-6">
-                        <input pInputText type="text" formControlName="mail" placeholder="Ingrese mail" />
-                    </div>
-                    <div class="ui-grid-col-4">
-                        <div class="ui-message ui-messages-error ui-corner-all"
-                            *ngIf="!userform.controls['mail'].valid&&userform.controls['mail'].dirty">
-                            <i class="fa fa-close"></i>
-                            Campo Obligatorio
-                        </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Mail *:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText type="text" formControlName="mail" placeholder="Ingrese mail" />
+                </div>
+                <div class="ui-grid-col-4">
+                    <div class="ui-message ui-messages-error ui-corner-all"
+                        *ngIf="!userform.controls['mail'].valid&&userform.controls['mail'].dirty">
+                        <i class="fa fa-close"></i>
+                        Campo Obligatorio
                     </div>
                 </div>
-
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-2">
-                        Password *:
-                    </div>
-                    <div class="ui-grid-col-6">
-                        <input pInputText type="password" formControlName="password" placeholder="Ingrese password" />
-                    </div>
-                    <div class="ui-grid-col-4">
-                        <div class="ui-message ui-messages-error ui-corner-all"
-                            *ngIf="!userform.controls['password'].valid&&userform.controls['password'].dirty">
-                            <i class="fa fa-close"></i>
-                            Campo Obligatorio
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-2"></div>
-                    <div class="ui-grid-col-6">
-                        <button pButton type="submit" label="Ingresar" [disabled]="!userform.valid"></button>
-                        <br>
-                        <br>
-                        <button pButton type="button" (click)="registrar()" label="Registrar"
-                            class="ui-button-success"></button>
-                    </div>
-                    <div class="ui-grid-col-4"></div>
-                </div>
-
             </div>
-        </p-panel>
+            <br>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Password *:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText type="password" formControlName="password" placeholder="Ingrese password" />
+                </div>
+                <div class="ui-grid-col-4">
+                    <div class="ui-message ui-messages-error ui-corner-all"
+                        *ngIf="!userform.controls['password'].valid&&userform.controls['password'].dirty">
+                        <i class="fa fa-close"></i>
+                        Campo Obligatorio
+                    </div>
+                </div>
+            </div>
 
-        ---------------------------
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2"></div>
+                <div class="ui-grid-col-6">
+                    <br>
+                    <button pButton type="submit" label="Ingresar" [disabled]="!userform.valid"></button>
+                    <br>
+                    <br>
+                    <button pButton type="button" (click)="registrar()" label="Registrar"
+                        class="ui-button-success"></button>
+                </div>
+                <div class="ui-grid-col-4"></div>
+            </div>
 
-        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">Header</span></ng-template>
-        Body Content
-        <ng-template pTemplate="footer"> Footer content here </ng-template>
+        </div>
+
     </p-panel>
+    <ng-template pTemplate="footer"> Footer content here </ng-template>
+
+    ---------------------------
+
 </form>

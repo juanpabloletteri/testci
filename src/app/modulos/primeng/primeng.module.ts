@@ -10,6 +10,7 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { PasswordModule } from 'primeng/password';
 
 
 
@@ -24,14 +25,16 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     PanelModule,
     InputTextModule,
     CheckboxModule,
-    RadioButtonModule
+    RadioButtonModule,
+    PasswordModule
   ],
   exports: [
     ButtonModule,
     PanelModule,
     InputTextModule,
     CheckboxModule,
-    RadioButtonModule
+    RadioButtonModule,
+    PasswordModule
   ]
 })
 export class PrimengModule { }
